@@ -1,42 +1,163 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+/* 
+////// For this challenge ///////
+
+- All text is in the text.md file
+
+// Requirements
+   1. Get all the navigation items next to one another
+   2. Add a space between all the items
+*/
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.3rem;
+}
+
+img {
+    max-width: 100%;
+}
+
+h1 {
+    font-size: 3rem;
+    margin-top: 0;
+}
+
+.section-title {
+    color: #87629A;
+}
+
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    text-transform: uppercase; 
+    color: #23424A;
+    font-weight: 900;
+    background-color: #38CFD9;
+    padding: .75em 2em;
+    border-radius: 100px;
+}
+
+.btn:hover,
+.btn:focus {
+    opacity: .75; 
+}
+
+.container {
+    width: 80%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.col {
+    /* these are now flex items */
+    width: 100%;
+}
+
+.col + .col {
+    margin-left: 30px;
+}
+
+
+header {
+    background: #136c72;
+    padding: 1em 0;
 }
 
 .logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+    margin-right: 1em;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-grow: 1;
+    flex-shrink: 1;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+
+
+
+.nav__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    display: flex;
+    align-items: center;
+    font-size: .9rem;
 }
 
-.card {
-  padding: 2em;
+.nav__item {
+    margin-right: 20px;
 }
 
-.read-the-docs {
-  color: #888;
+.push-right {
+    margin-right: auto;
+}
+
+.nav__link {
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.nav__link--button {
+    background: #fff;
+    color: #136c72;
+    padding: .25em 1em;
+    border-radius: 10em;
+}
+
+.nav__link:hover {
+    opacity: .75;
+}
+
+.primary-list {
+    margin: 0 auto;
+}
+
+.hero {
+    padding: 100px 0;
+    background-color: #23424A;
+    color: #FFF;
+}
+
+.hero__text { 
+    width: 62%;
+}
+
+.hero__img {
+    width: 32%;
+    align-self: flex-start;
+}
+
+.hero p {
+    margin-bottom: 3em;
+}
+
+.main {
+    margin-top: 3em;
+}
+
+.primary-content {
+    width: 62%;
+}
+
+.sidebar {
+    width: 32%;
+    padding: 1em;
+    text-align: center;
+    color: #fff;
+    background-color: #136c72;
 }
